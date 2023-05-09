@@ -1,10 +1,9 @@
 var nombre = window.prompt("Ecrivez un nombre :");
-
-if (nombre%2)
+if (nombre%2==0)
 {
-    console.log("nombre pair");
+    window.alert("nombre pair");
 }
 else
 {
-    console.log("nombre impair");
+    window.alert("nombre impair");
 }
