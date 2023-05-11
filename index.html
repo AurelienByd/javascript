@@ -1,43 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/home/stagiaire/javascript/CSS/style.css">
-    <title>JAVASCRIPT</title>
-</head>
+<html>
 <body>
+    <form action="" id="form1" name="form1">
+        <input type="text" name= "nom" value="Mozart">
+        <input type="text" name= "prenom" value="Ella">
+        <input type="submit" id="idSubForm1" name="subForm1" value="Connection">
+    </form>
 
-    <div class="container">
-
-        <div class="row">   
-            <div class="col-12">
-                <h1 style="text-align: center;">JAVASCRIPT</h1>
-                <p> Ma page HTML qui contient un fichier <strong>.js</strong></p>
-                <p>qui se trouve dans une balise <strong>script</strong> en fin de page, <strong>avant</strong> la <strong>fermeture</strong> de la <strong>balise body</strong></p> 
-            </div>        
-        </div>
-    
-        <div class="row">
-            <div class="col-5">
-                <button id="Id_btn1" type="button" class="btn btn-primary">Alert()</button>
-                <button id="Id_btn2"type="button" class="btn btn-primary">Prompt()</button>
-                <button id="Id_btn3"type="button" class="btn btn-primary">Confirm()</button>
-                <button id="Id_btn4"type="button" class="btn btn-primary">Console()</button>        
-            </div>
-        </div>
-    
-        <div class="row">
-            <div class="col-12">
-                <h3><p id="texte1"></p></h3>
-                <p id="texte2"></p>                
-            </div>        
-        </div>
-    
-    </div>
-
-<script src="/home/stagiaire/javascript/JAVASCRIPT/javascript.js"></script>
-    
+    <script>
+        console.log("La 2nde zone de texte a pour nom : ");
+        console.log(document.forms['form1'].elements[1].name);
+        console.log("La 1ère zone de texte a pour valeur : '");
+        console.log(document.forms['form1'].elements['nom'].value);
+        console.log("Le bouton Submit a pour identifiant unique : ");
+        console.log(document.getElementById('idSubForm1').id);
+        console.log("Le bouton Submit a pour valeur : ");
+        console.log(document.getElementsByName('subForm1')[0].value);
+    </script>
 </body>
 </html>
