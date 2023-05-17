@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/home/stagiaire/javascript/phase_16/style.css">
+    <title>Phase 16 exercices</title>
+</head>
+<body>
+    
+    <h1><b>Phase 16 exercices</b></h1><br>
+<h3>Vos coordonnées :
+    <p>* Ces zones sont obligatoires pour envoyer le formulaire.</p><br>
+    <div class="FORM">
+    <form action="destination.php" method="post" id="form_phase16">
+        <div class="form"></div><label for="société">Société :</label></div><input type="text" name="société" id="société"></div>
+        <div class="form"></div><label for="prsactr">Personne à contacter :</label></div><input type="text" name="prsactr" id="prsactr"></div>
+        <div class="form"><label for="adresse">Adresse de l'entreprise :</label>
+            <textarea name="adresse" id="adresse" rows="3"></textarea>
+        </div>
+        <div class="form"><label for="cp">Code Postal :</label><input type="text" name="cp" id="cp"></div>
+        <div class="form"><label for="ville">Ville :</label><input type="text" name="ville" id="ville"></div>
+        <div class="form"><label for="email">E-mail :</label><input type="email" name="email" id="email"></div>
+        <div class="form"><label for="téléphone">Téléphone :</label><input type="text" name="téléphone" id="téléphone"></div>
+        <div class="form"><label for="environnement">Sélectionnez l'environnement technique du projet :</label>
+            <select name="environnement" id="environnement">
+                <option value="">Choisissez</option>
+                <option value="access">Access</option>
+                <option value="java">Java</option>
+                <option value="delphi">Delphi</option>
+                <option value="windev">Windev</option>
+                <option value="visual_basic">Visual Basic</option>
+                <option value="power_builder">Power Builder</option>
+                <option value="internet">Internet</option>
+                <option value="intranet">Intranet</option>
+                <option value="windows_nt">Windows NT</option>
+                <option value="unix">Unix</option>
+                <option value="sql_server">SQL Server</option>
+                <option value="oracle">Oracle</option>
+                <option value="autres">Autres...</option>
+            </select>
+        </div>
+        <div class="form">
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Effacer">
+        </div>
+    </form>
+    </div>
+</h3>
+<script src="javascript.js">
+
+</script>
+
+</body>
+</html>
