@@ -1,1 +1,59 @@
-p {color:darkred};
+p {
+    color:darkred;
+}
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+    width: 15cm;
+}
+
+.form {
+    display:flex;
+    justify-content: space-between;
+    width: 13cm;
+}
+
+.f1 {
+    display: flex;
+}
+
+.f2 {
+    display: flex;
+}
+
+.f3 {
+    display: flex;
+}
+
+.f4 {
+    display: flex;
+}
+
+.f5 {
+    display: flex;
+}
+
+.f6 {
+    display: flex;
+}
+
+.f7 {
+    display: flex;
+}
+
+.f8 {
+    display: block;
+}
+
+.c1 {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c2 {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+}

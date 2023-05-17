@@ -8,23 +8,42 @@
     <title>Phase 16 exercices</title>
 </head>
 <body>
-    
     <h1><b>Phase 16 exercices</b></h1><br>
 <h3>Vos coordonnées :
-    <p>* Ces zones sont obligatoires pour envoyer le formulaire.</p><br>
-    <div class="FORM">
+    <p>* Ces zones sont obligatoires pour envoyer le formulaire.</p>
+    <div class="formulaire">
     <form action="destination.php" method="post" id="form_phase16">
-        <div class="form"></div><label for="société">Société :</label></div><input type="text" name="société" id="société"></div>
-        <div class="form"></div><label for="prsactr">Personne à contacter :</label></div><input type="text" name="prsactr" id="prsactr"></div>
-        <div class="form"><label for="adresse">Adresse de l'entreprise :</label>
-            <textarea name="adresse" id="adresse" rows="3"></textarea>
-        </div>
-        <div class="form"><label for="cp">Code Postal :</label><input type="text" name="cp" id="cp"></div>
-        <div class="form"><label for="ville">Ville :</label><input type="text" name="ville" id="ville"></div>
-        <div class="form"><label for="email">E-mail :</label><input type="email" name="email" id="email"></div>
-        <div class="form"><label for="téléphone">Téléphone :</label><input type="text" name="téléphone" id="téléphone"></div>
-        <div class="form"><label for="environnement">Sélectionnez l'environnement technique du projet :</label>
-            <select name="environnement" id="environnement">
+        <div class="form">
+            <div class="f1"><div class="c1"><label for="société">Société :</label></div></div>
+            <div class="f1"><div class="c2"><input type="text" name="société" id="société"><font color="darkred">*</font></div></div>
+        </div><br>
+        <div class="form">
+            <div class="f2"><div class="c1"><label for="prsactr">Personne à contacter :</label></div></div>
+            <div class="f2"><div class="c2"><input type="text" name="prsactr" id="prsactr"><font color="darkred">*</font></div></div>
+        </div><br>
+        <div class="form">
+            <div class="f3"><div class="c1"><label for="adresse">Adresse de l'entreprise :</label></div></div>
+            <div class="f3"><div class="c2"><textarea name="adresse" id="adresse" rows="3"></textarea></div></div>
+        </div><br>
+        <div class="form">
+            <div class="f4"><div class="c1"><label for="cp">Code Postal :</label></div></div>
+            <div class="f4"><div class="c2"><input type="text" name="cp" id="cp"><font color="darkred">*</font></div></div>
+        </div><br>
+        <div class="form">
+            <div class="f5"><div class="c1"><label for="ville">Ville :</label></div></div>
+            <div class="f5"><div class="c2"><input type="text" name="ville" id="ville"><font color="darkred">*</font></div></div>
+        </div><br>
+        <div class="form">
+            <div class="f6"><div class="c1"><label for="email">E-mail :</label></div></div>
+            <div class="f6"><div class="c2"><input type="email" name="email" id="email"><font color="darkred">*</font></div></div>
+        </div><br>
+        <div class="form">
+            <div class="f7"><div class="c1"><label for="téléphone">Téléphone :</label></div></div>
+            <div class="f7"><div class="c2"><input type="text" name="téléphone" id="téléphone"></div></div>
+        </div><br>
+        <div class="form">
+            <div class="f8"><div class="c1"><label for="environnement">Sélectionnez l'environnement technique du projet :</label></div></div>
+            <div class="f8"><select name="environnement" id="environnement">
                 <option value="">Choisissez</option>
                 <option value="access">Access</option>
                 <option value="java">Java</option>
@@ -39,18 +58,15 @@
                 <option value="sql_server">SQL Server</option>
                 <option value="oracle">Oracle</option>
                 <option value="autres">Autres...</option>
-            </select>
-        </div>
-        <div class="form">
+            </select></div>
+        </div><br>
             <input type="submit" value="Envoyer">
             <input type="reset" value="Effacer">
-        </div>
     </form>
     </div>
 </h3>
 <script src="javascript.js">
 
 </script>
-
 </body>
 </html>
