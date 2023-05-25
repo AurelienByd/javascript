@@ -13,36 +13,41 @@
     <p>* Ces zones sont obligatoires pour envoyer le formulaire.</p>
     <div class="formulaire">
     <form action="destination.php" method="post" id="form_phase16">
+            <label for="société">Société :</label>
+            <input type="text" name="société" id="société"><font color="darkred">*</font>
+            <br>
+            <span id="error"></span>
+            <br>
+            <label for="prsactr">Personne à contacter :</label>
+            <input type="text" name="prsactr" id="prsactr"><font color="darkred">*</font>
+            <br>
+            <span id="error"></span>
+            <br>
         <div class="form">
-            <div class="f1"><div class="c1"><label for="société">Société :</label></div></div>
-            <div class="f1"><div class="c2"><input type="text" name="société" id="société"><font color="darkred">*</font></div></div>
+            <div class="f3"><label for="adresse">Adresse de l'entreprise :</label></div>
+            <div class="f3"><textarea name="adresse" id="adresse" rows="3"></textarea></div>
+        </div><br>
+            <label for="cp">Code Postal :</label>
+            <input type="text" name="cp" id="cp" minlength="5" maxlength="5"><font color="darkred">*</font>
+            <br>
+            <span id="error"></span>
+            <br>
+            <label for="ville">Ville :</label>
+            <input type="text" name="ville" id="ville"><font color="darkred">*</font>
+            <br>
+            <span id="error"></span>
+            <br>
+            <label for="email">E-mail :</label>
+            <input type="email" name="email" id="email"><font color="darkred">*</font>
+            <br>
+            <span id="error"></span>
+            <br>
+        <div class="form">
+            <div class="f7"><label for="téléphone">Téléphone :</label></div>
+            <div class="f7"><input type="text" name="téléphone" id="téléphone"></div>
         </div><br>
         <div class="form">
-            <div class="f2"><div class="c1"><label for="prsactr">Personne à contacter :</label></div></div>
-            <div class="f2"><div class="c2"><input type="text" name="prsactr" id="prsactr"><font color="darkred">*</font></div></div>
-        </div><br>
-        <div class="form">
-            <div class="f3"><div class="c1"><label for="adresse">Adresse de l'entreprise :</label></div></div>
-            <div class="f3"><div class="c2"><textarea name="adresse" id="adresse" rows="3"></textarea></div></div>
-        </div><br>
-        <div class="form">
-            <div class="f4"><div class="c1"><label for="cp">Code Postal :</label></div></div>
-            <div class="f4"><div class="c2"><input type="text" name="cp" id="cp"><font color="darkred">*</font></div></div>
-        </div><br>
-        <div class="form">
-            <div class="f5"><div class="c1"><label for="ville">Ville :</label></div></div>
-            <div class="f5"><div class="c2"><input type="text" name="ville" id="ville"><font color="darkred">*</font></div></div>
-        </div><br>
-        <div class="form">
-            <div class="f6"><div class="c1"><label for="email">E-mail :</label></div></div>
-            <div class="f6"><div class="c2"><input type="email" name="email" id="email"><font color="darkred">*</font></div></div>
-        </div><br>
-        <div class="form">
-            <div class="f7"><div class="c1"><label for="téléphone">Téléphone :</label></div></div>
-            <div class="f7"><div class="c2"><input type="text" name="téléphone" id="téléphone"></div></div>
-        </div><br>
-        <div class="form">
-            <div class="f8"><div class="c1"><label for="environnement">Sélectionnez l'environnement technique du projet :</label></div></div>
+            <div class="f8"><label for="environnement">Sélectionnez l'environnement technique du projet :</label></div>
             <div class="f8"><select name="environnement" id="environnement">
                 <option value="">Choisissez</option>
                 <option value="access">Access</option>
@@ -65,11 +70,71 @@
     </form>
     </div>
 </h3>
-<script src="javascript.js">
+<script>
     let myform = document.getElementById("form_phase16");
 
     myform.addEventListener("submit", function(e) {
-        e.preventDefault();
+        let mysociété = document.getElementById("société");
+        let mycontact = document.getElementById("prsactr");
+        let mycode = document.getElementById("cp");
+        let myville = document.getElementById("ville");
+        let mymail = document.getElementById("email");
+        let myregex1 = /^[0-9]+$/;
+        let myregex2 = /^[@]+$/;
+
+        if (mysociété.value.trim() == "") {
+            let myerror = document.getElementById("error");
+            //myerror.innerHTML = 'Le champs est requis.';
+            //myerror.style.color = "red"
+            myerror = window.alert ("Entrez le nom de la société.");
+            e.preventDefault();
+        } //else if (myregex.test(mysociété.value) == false) {
+            //let myerror = document.getElementById("error");
+            //myerror.innerHTML = 'Le champs doit comporter des lettres.';
+            //myerror.style.color = "red"
+            //myerror = window.alert ("Le champs doit comporter des lettres.");
+            //e.preventDefault();
+        //}
+        if (mycontact.value.trim() == "") {
+            let myerror = document.getElementById("error");
+            //myerror.innerHTML = 'Le champs est requis.';
+            //myerror.style.color = "red"
+            myerror = window.alert ("Entrez le nom de la personne à contacter.");
+            e.preventDefault();
+        }
+        if (mycode.value.trim() == "") {
+            let myerror = document.getElementById("error");
+            //myerror.innerHTML = 'Le champs est requis.';
+            //myerror.style.color = "red"
+            myerror = window.alert ("Entrez le code postal.");
+            e.preventDefault();
+        } else if (myregex1.test(mycode.value) == false) {
+            let myerror = document.getElementById("error");
+            //myerror.innerHTML = 'Le champs doit comporter des lettres.';
+            //myerror.style.color = "red"
+            myerror = window.alert ("Le code postal doit contenir cinq chiffres.");
+            e.preventDefault();
+        }
+        if (myville.value.trim() == "") {
+            let myerror = document.getElementById("error");
+            //myerror.innerHTML = 'Le champs est requis.';
+            //myerror.style.color = "red"
+            myerror = window.alert ("Entrez le nom de la ville.");
+            e.preventDefault();
+        }
+        if (mymail.value.trim() == "") {
+            let myerror = document.getElementById("error");
+            //myerror.innerHTML = 'Le champs est requis.';
+            //myerror.style.color = "red"
+            myerror = window.alert ("Entrez l'adresse mail.");
+            e.preventDefault();
+        } //else if (myregex2.test(mymail.value) == false) {
+            //let myerror = document.getElementById("error");
+            //myerror.innerHTML = 'Le champs doit comporter des lettres.';
+            //myerror.style.color = "red"
+            //myerror = window.alert ("L'adresse mail doit contenir un @");
+            //e.preventDefault();
+        //}
     })
 </script>
 </body>
